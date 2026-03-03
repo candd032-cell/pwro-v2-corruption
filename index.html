@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poring World V2 Corruption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .intro-text {
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+        .intro-description {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #444;
+            text-align: left;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .intro-description div {
+            margin-bottom: 20px;
+        }
+        .code-style {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d63384;
+        }
+        section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .carousel-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .carousel-item {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .carousel-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        .carousel-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .modal-content img {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+        /* Table Styles */
+        .search-container {
+            margin: 20px 0;
+            text-align: right;
+        }
+        #searchInput {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .table-container {
+            margin-top: 40px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 0.9em;
+        }
+        th {
+            background-color: #333;
+            color: white;
+            font-weight: 700;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .center {
+            text-align: center;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Poring World V2 Corruption</h1>
+</header>
+
+<div class="intro-text">
+    <h2 class="center">TED's @item</h2>
+    <div class="intro-description">
+        <div>
+            It was only the first week of the server, and he already had a ton of <b>@item</b> and <b>@zeny</b> (see screenshot).
+            He also sold the Poring World database for 200k during the first week of PW, which is why there were so many hacking issues. He implemented precautions like whitelisting way too late, because the <span class="code-style">"rental"</span> for the database had supposedly <span class="code-style">"expired."</span>
+            In the early days of PW, tons of items, cards, and zeny were scattered everywhere. The screenshot with the IGN <span class="code-style">“Police Tester”</span> is Ted himself. That's the character that suddenly appeared in the <b>zeny</b> rankings because he forgot to transfer the <b>zeny</b> over.
+        </div>
+
+        <div class="center bold">
+            PS: If you don't believe this and will keep saying FUD then you're an idiot.
+            <b>PW2</b> started on November 28, still confused with dates? Look at your <b>PW2</b> installer file name it clearly says <span class="code-style">"PW-COMMUNITY-SAFE-11-26-2025"</span> NOVEMBER 26.
+        </div>
+    </div>
+</div>
+
+<section>
+    <h2>@item & @zeny</h2>
+    <div class="carousel-container" id="carousel">
+        <div class="carousel-item" onclick="popOut('images/1.png')">
+            <img src="images/1.png" alt="Item 1">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/2.png')">
+            <img src="images/2.png" alt="Item 2">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/3.jpg')">
+            <img src="images/3.jpg" alt="Item 3">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/4.jpg')">
+            <img src="images/4.jpg" alt="Item 4">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/5.jpg')">
+            <img src="images/5.jpg" alt="Item 5">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/6.jpg')">
+            <img src="images/6.jpg" alt="Item 6">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_Player One]screenPWCommunity000.jpg')">
+            <img src="images/[Trade_Player One]screenPWCommunity000.jpg" alt="Trade 000">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_L a u v]screenPWCommunity002.jpg')">
+            <img src="images/[Trade_L a u v]screenPWCommunity002.jpg" alt="Trade 002">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_Boy Tusok]screenPWCommunity005.jpg')">
+            <img src="images/[Trade_Boy Tusok]screenPWCommunity005.jpg" alt="Trade 005">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_Frogstomp]screenPWCommunity006.jpg')">
+            <img src="images/[Trade_Frogstomp]screenPWCommunity006.jpg" alt="Trade 006">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_Frogstomp]screenPWCommunity007.jpg')">
+            <img src="images/[Trade_Frogstomp]screenPWCommunity007.jpg" alt="Trade 007">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_KulubE]screenPWCommunity009.jpg')">
+            <img src="images/[Trade_KulubE]screenPWCommunity009.jpg" alt="Trade 009">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_UniqoIho]screenPWCommunity000.jpg')">
+            <img src="images/[Trade_UniqoIho]screenPWCommunity000.jpg" alt="Trade Uniqo 000">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_UniqoIho]screenPWCommunity001.jpg')">
+            <img src="images/[Trade_UniqoIho]screenPWCommunity001.jpg" alt="Trade Uniqo 001">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_UniqoIho]screenPWCommunity002.jpg')">
+            <img src="images/[Trade_UniqoIho]screenPWCommunity002.jpg" alt="Trade Uniqo 002">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/[Trade_UniqoIho]screenPWCommunity004.jpg')">
+            <img src="images/[Trade_UniqoIho]screenPWCommunity004.jpg" alt="Trade Uniqo 004">
+        </div>
+        <div class="carousel-item" onclick="popOut('images/@item.png')">
+            <img src="images/@item.png" alt="Item">
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Accounts</h2>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search account ID, username, IGN, or email...">
+    </div>
+    <div class="table-container">
+        <table id="accountTable">
+            <thead>
+                <tr>
+                    <th>account id</th>
+                    <th>username</th>
+                    <th>password</th>
+                    <th>pincode</th>
+                    <th>IGN</th>
+                    <th>email</th>
+                    <th>birthdate</th>
+                    <th>lastlogin</th>
+                    <th>lastip</th>
+                    <th>last unique id</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Pop-out Modal -->
+<div id="modal" class="modal" onclick="closePopOut()">
+    <div class="modal-content">
+        <img id="modalImg" src="" alt="Pop-out">
+    </div>
+</div>
+
+<script src="accounts.js"></script>
+<script>
+    function popOut(src) {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modalImg');
+        modalImg.src = src;
+        modal.style.display = 'flex';
+    }
+
+    function closePopOut() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    const tableBody = document.getElementById('tableBody');
+    const searchInput = document.getElementById('searchInput');
+
+    function renderTable(data) {
+        tableBody.innerHTML = '';
+        data.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.account_id}</td>
+                <td>${item.userid}</td>
+                <td>${item.password}</td>
+                <td>${item.pincode || ''}</td>
+                <td>${item.character_names || ''}</td>
+                <td>${item.email}</td>
+                <td>${item.birthdate || ''}</td>
+                <td>${item.lastlogin || ''}</td>
+                <td>${item.last_ip || ''}</td>
+                <td>${item.last_unique_id || '0'}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filtered = (allAccounts || []).filter(acc => {
+            return (
+                acc.account_id.toString().includes(searchTerm) ||
+                (acc.userid && acc.userid.toLowerCase().includes(searchTerm)) ||
+                (acc.character_names && acc.character_names.toLowerCase().includes(searchTerm)) ||
+                (acc.email && acc.email.toLowerCase().includes(searchTerm))
+            );
+        });
+        renderTable(filtered);
+    });
+
+    if (typeof allAccounts !== 'undefined') {
+        renderTable(allAccounts);
+    } else {
+        console.error('allAccounts is not defined. Check accounts.js');
+        tableBody.innerHTML = '<tr><td colspan="10" style="text-align:center; color:red;">Error loading account data. Make sure accounts.js is linked correctly.</td></tr>';
+    }
+</script>
+
+</body>
+</html>
